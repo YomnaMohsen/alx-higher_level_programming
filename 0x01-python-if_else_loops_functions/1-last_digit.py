@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-mod = number - (10 * int(number / 10))
+mod = number - (10 * int(number / 10)) # this eq for -ve numbers also
 if mod > 5:
     print("Last digit of {:d} is {:d} and is greater than 5"
           .format(number, mod))

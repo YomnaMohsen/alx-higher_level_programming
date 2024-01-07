@@ -8,4 +8,4 @@ if __name__ == "__main__":
            "argument" if count == 1 else "arguments",
            "." if count == 0 else ":"))
     for index in range(count):
-        print("{:d}{} {:s}".format(index + 1, ": ", argv[index+1]))
+        print("{:d}{}{:s}".format(index + 1, ": ", argv[index+1]))

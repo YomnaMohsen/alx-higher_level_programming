@@ -1,0 +1,1 @@
+This folder contains tasks about handling exceptions in python

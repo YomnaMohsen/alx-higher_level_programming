@@ -1,0 +1,1 @@
+This folder conatins problems about python classes and objects

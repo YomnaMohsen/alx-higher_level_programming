@@ -60,8 +60,8 @@ class Rectangle:
         """custom str fn"""
         if self.height == 0 or self.width == 0:
             return ""
-        x = self.print_symbol
-        s = (x * self.width + "\n") * (self.height - 1) + (x * self.width)
+        s = ((f"{self.print_symbol}" * self.width + "\n") 
+             * self.height).rstrip()
         return s
 
     def __repr__(self):

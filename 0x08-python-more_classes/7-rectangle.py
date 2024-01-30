@@ -60,7 +60,7 @@ class Rectangle:
         """custom str fn"""
         if self.height == 0 or self.width == 0:
             return ""
-        s = ((f"{self.print_symbol}" * self.width + "\n") 
+        s = ((f"{self.print_symbol}" * self.width + "\n")
              * self.height).rstrip()
         return s
 

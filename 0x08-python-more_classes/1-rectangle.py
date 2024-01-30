@@ -11,17 +11,17 @@ class Rectangle:
             height(int): set rectangle height
 
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """Rteurn width"""
+        """Return width"""
         return self.__width
 
     @property
     def height(self):
-        """Rteurn height"""
+        """Return height"""
         return self.__height
 
     @width.setter

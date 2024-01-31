@@ -36,9 +36,3 @@ def matrix_divided(matrix, div):
             sub_mat.append(round(num/div, 2))
         res_mat.append(sub_mat)
     return res_mat
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)

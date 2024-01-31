@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-import sys
-"""add integer module """
+"""add integer module
+
+"""
 
 
 def add_integer(a, b=98):

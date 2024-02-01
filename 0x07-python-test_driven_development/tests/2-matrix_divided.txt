@@ -13,6 +13,7 @@ Using ``matrix_divided``
 
     >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 
+ 
  Not list of lists:
     >>> matrix_divided("[6, 12]", 3)
     Traceback (most recent call last):
@@ -40,4 +41,10 @@ Using ``matrix_divided``
    >>> matrix_divided([[6,9], [12,"s"]], 3)
    Traceback (most recent call last):
    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+ Matrix empty:
+   >>> matrix_divided([], 3)
+   Traceback (most recent call last):
+   TypeError: matrix must be a matrix (list of lists) of integers/floats
+  
 

@@ -1,0 +1,35 @@
+The ``say_my_name`` module
+======================
+Usage
+======
+
+This module  divide print full name ``first_name`` and `` last name``
+
+
+Using ``say_my_name``
+-------------------
+
+ First import ``say_my_name`` from the ``3-say_my_name`` module:
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+ valid string:
+    >>> say_my_name("Yomna", "Moh")
+    My name is Yomna Moh
+
+ last_name not string:
+ ======================
+    >>> say_my_name("yara", 2)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+ first_name not string:
+ ===================== 
+    >>> say_my_name(2, "yahia")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+ last_name missed:
+ ==================
+    >>> say_my_name("yahia")
+    My name is yahia 

@@ -1,0 +1,43 @@
+The ``matrix_divided`` module
+======================
+Usage
+======
+
+This module u divide ``matrix`` by certain div and returns new matrix
+
+
+Using ``matrix_divided``
+-------------------
+
+ First import ``matrix_divided`` from the ``2-matrix_divided`` module:
+
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+ Not list of lists:
+    >>> matrix_divided("[6, 12]", 3)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+ Rows of matrix haven't same size:
+    >>> matrix_divided([[1, 2], [3, 6, 7]], 3)
+    Traceback (most recent call last):
+    TypeError: Each row of the matrix must have the same size
+
+ div by zero:
+  >>> matrix_divided([[6,9], [12,3]], 0)
+  Traceback (most recent call last):
+  ZeroDivisionError: division by zero
+
+ Div is invalid value:
+ ::
+ TypeError will be raised:
+ 
+   >>> matrix_divided([[6,9], [12,3]], "div")
+   Traceback (most recent call last):
+   TypeError: div must be a number
+
+ Number is not int or float:
+   >>> matrix_divided([[6,9], [12,"s"]], 3)
+   Traceback (most recent call last):
+   TypeError: matrix must be a matrix (list of lists) of integers/floats
+

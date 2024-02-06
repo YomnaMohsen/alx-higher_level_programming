@@ -1,0 +1,1 @@
+This folder conatins tasks about input and output processes in python

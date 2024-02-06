@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """write_file
+    """write to file string text
        Args:
        filename: string
        text: string

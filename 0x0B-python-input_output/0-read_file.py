@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-"""Read file module"""
+"""Define read_file module"""
 
 
 def read_file(filename=""):
-    """read_file
-       Args:
-       filename: string
+    """reads from file amd print 
+    to stdout
+    Args:
+    filename: string
     """
     with open(filename, encoding="utf-8") as f:
         for line in f:

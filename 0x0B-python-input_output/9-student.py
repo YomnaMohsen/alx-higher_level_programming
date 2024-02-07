@@ -4,7 +4,6 @@
 
 class Student:
     """This class defines student data"""
-    
 
     def __init__(self, first_name, last_name, age):
         """Initializes a student object.
@@ -19,7 +18,7 @@ class Student:
 
     def to_json(self):
         """
-        retrieves a dictionary representation of 
+        retrieves a dictionary representation of
         a Student instance
         """
         return self.__dict__

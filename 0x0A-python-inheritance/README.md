@@ -1,0 +1,1 @@
+This folder contains problems about inheritance in python

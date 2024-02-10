@@ -11,7 +11,7 @@ class Square:
             poistion (int, int): poistion of square
 
         """
-        self.__size = size
+        self.size = size
         self.position = position
 
     @property
@@ -59,5 +59,6 @@ class Square:
             [print(" ", end="") for k in range(self.position[0])]
             [print("#", end="") for h in range(self.size)]
             print()
-s = Square(3)
-print(s.size)
+s = Square()
+print(s.si)
+s.size ="a"

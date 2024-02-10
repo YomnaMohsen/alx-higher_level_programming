@@ -2,6 +2,6 @@
 """Base Geometry class"""
 
 
-class Square:
+class BaseGeometry:
     """The base class for geometry shapes """
     pass

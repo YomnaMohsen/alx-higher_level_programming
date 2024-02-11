@@ -13,3 +13,4 @@ class Square(Rectangle):
             size :int
         """
         super().__init__(size, size)
+        super().integer_validator("size", size)

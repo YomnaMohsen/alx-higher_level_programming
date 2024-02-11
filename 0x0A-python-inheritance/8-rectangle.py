@@ -13,7 +13,8 @@ class Rectangle(BaseGeometry):
             width :int
             height: int
         """
-        super().__width = width
-        super().__height = height
+        self.__width = width
+        self.__height = height
+        # self can be used instead of super
         super().integer_validator("width", self.__width)
         super().integer_validator("height", self.__height)

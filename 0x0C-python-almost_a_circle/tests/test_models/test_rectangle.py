@@ -62,9 +62,9 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
             R.x = -1
 
         with self.assertRaises(TypeError):
-            Rectangle(10, 11, "y", 13)
+            R1 = Rectangle(10, 11, "y", 13)
         with self.assertRaises(TypeError):
-            Rectangle(10, 11, [1, 2, 3])
+            R2 = Rectangle(10, 11, [1, 2, 3])
 
         with self.assertRaises(TypeError):
             Rectangle(10, 11, {})       

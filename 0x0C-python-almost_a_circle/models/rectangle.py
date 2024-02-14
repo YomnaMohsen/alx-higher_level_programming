@@ -78,3 +78,10 @@ class Rectangle(Base):
     def area(self):
         """return area of rectangle"""
         return self.width * self.height
+    
+    def display(self):
+        """custom str fn"""
+        if self.height == 0 or self.width == 0:
+            return ""
+        s = ("#" * self.width + "\n") * (self.height - 1) + ("#" * self.width)
+        return s

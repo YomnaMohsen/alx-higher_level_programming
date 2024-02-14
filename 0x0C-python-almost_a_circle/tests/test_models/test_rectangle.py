@@ -11,8 +11,9 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
     def test_id(self):
         """test different cases for id """
         R1 = Rectangle(10, 4)
-        #R2 = Rectangle(10, 2, 0, 0, 12)
+        R2 = Rectangle(1, 2, 3, 4, 5)
         R3 = Rectangle(2, 10)
+        self.assertEqual(2, R2.height)
         self.assertEqual(R3.id, R1.id + 1)
         with self.assertRaises(TypeError):
             R_arg = Rectangle()
@@ -30,7 +31,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
         self.assertEqual(R.width, 14)
 
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            R.width = -1
+            Rectangle(-1, 3)
 
         with self.assertRaises(TypeError):
             Rectangle("e", 2)   
@@ -44,10 +45,11 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
         self.assertEqual(Rect.height, 8)
 
         with self.assertRaises(TypeError):
-            Rect1 = Rectangle(10,"x")
+            Rectangle(10,"x")
+            
         
         with self.assertRaises(ValueError):
-            Rect.height = -1
+            Rectangle(10, -2)
 
         
     def test_x(self):
@@ -68,7 +70,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
         with self.assertRaises(TypeError):
             Rectangle(10, 11, {})
         with self.assertRaises(ValueError):
-            R.x = -1           
+            Rectangle(10, 11, -2)          
 
     def test_y(self):
         """Tests y attribute"""
@@ -82,7 +84,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
             Rectangle(10, 20, 5, "y")
    
         with self.assertRaises(ValueError):
-            R.y = -5     
+            Rectangle(10, 20, 5, -4)     
 
 if __name__ == '__main__':
     unittest.main()

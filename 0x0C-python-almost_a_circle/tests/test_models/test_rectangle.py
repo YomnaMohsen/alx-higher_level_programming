@@ -2,6 +2,7 @@
 """Unitest module"""
 
 import unittest
+
 from models.rectangle import Rectangle
 
 class Test_Rectangle(unittest.TestCase):
@@ -15,36 +16,44 @@ class Test_Rectangle(unittest.TestCase):
         self.assertEqual(R3.id, R1.id + 1)
         self.assertEqual(R2.id, 12)
 
-
     def test_att(self):
         """Tests diff attributes """
         R = Rectangle(12,10)
         with self.assertRaises(TypeError):
             R_arg = Rectangle()
         with self.assertRaises(AttributeError):
-            print(Rectangle(10,2).__width)
+            print(Rectangle(10, 2).__width)
         with self.assertRaises(AttributeError):
-            print(Rectangle(10,2).__height)               
+            print(Rectangle(10, 2).__height)               
         R.width = 14    
         self.assertEqual(R.width, 14)    
 
 
     def test_types(self):
-       """Tests different value types of rect object Args"""
-       Rect = Rectangle(10,6)
+        """Tests different value types of rect object Args"""
+        Rect = Rectangle(10, 6)
+        with self.assertRaises(TypeError):
+            Rectangle(10,"x")
+        
+        with self.assertRaises(ValueError):
+            Rect.height = 0
 
-       with self.assertRaises(TypeError):
-        Rectangle(10,"x")
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-9, 10)
 
-       with self.assertRaises(ValueError):
-        Rect.width = 0
+        with self.assertRaises(TypeError):
+            Rect.height = "t"
 
-       with self.assertRaisesRegex(TypeError, "height must be an integer"):
-          Rectangle(10, None)
+        with self.assertRaises(TypeError):
+            Rect.x = None
 
-       with self.assertRaises(ValueError):
-        Rect.x =-1    
-      
+        with self.assertRaises(ValueError):
+            Rect.x = -1 
+        with self.assertRaises(TypeError):
+            Rect.y = None
+            
+        with self.assertRaises(ValueError):
+            Rect.y = -5     
 
 if __name__ == '__main__':
     unittest.main()

@@ -9,29 +9,32 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_id(self):
         """test different cases for id """
-        R1 = Rectangle(10, 2)
+        R1 = Rectangle(10, 4)
         R2 = Rectangle(10, 2, 0, 0, 12)
         R3 = Rectangle(2, 10)
-        R4 = Rectangle(14, 10)
-        self.assertEqual(R1.id, 1)
+        self.assertEqual(R3.id, R1.id + 1)
         self.assertEqual(R2.id, 12)
-        self.assertEqual(R3.id, 2)
-        self.assertEqual(R4.width, 14)
-        self.assertEqual(R4.id, 3)
-
-    #def test_att(self):
-     #   """Tests diff attributes"""
-      #  R = Rectangle(10,2,1,2,0)
-       # self.assertEqual(R.x, R.y, R.id, 1, 2, 0) 
 
 
-    def test_types(self):
-        """Tests different value types of rect object Args"""
-       
+    def test_att(self):
+        """Tests diff attributes """
+        R = Rectangle(12,10)
         with self.assertRaises(TypeError):
-            Rectangle(10)    
+            R_arg = Rectangle()
         with self.assertRaises(AttributeError):
             print(Rectangle(10,2).__width)
+        with self.assertRaises(AttributeError):
+            print(Rectangle(10,2).__height)
+        R.width = 14    
+        self.assertEqual(R.width, 14)    
+
+
+    #def test_types(self):
+     #   """Tests different value types of rect object Args"""
+       
+      #  with self.assertRaises(TypeError):
+       #     Rectangle(10)    
+        
               
 
         

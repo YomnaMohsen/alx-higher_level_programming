@@ -59,6 +59,3 @@ class Square:
             [print(" ", end="") for k in range(self.position[0])]
             [print("#", end="") for h in range(self.size)]
             print()
-s = Square()
-print(s.si)
-s.size ="a"

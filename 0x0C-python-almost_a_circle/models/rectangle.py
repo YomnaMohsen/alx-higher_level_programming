@@ -61,7 +61,7 @@ class Rectangle(Base):
     def x(self, value):
         """Set x"""
         if not isinstance(value, int):
-            raise TypeError("x must be an integer")       
+            raise TypeError("x must be an integer")     
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
@@ -78,10 +78,10 @@ class Rectangle(Base):
     def area(self):
         """return area of rectangle"""
         return self.width * self.height
-    
+
     def display(self):
         """custom str fn"""
         if self.height == 0 or self.width == 0:
             return ""
         s = ("#" * self.width + "\n") * (self.height - 1) + ("#" * self.width)
-        return s
+        print(s)

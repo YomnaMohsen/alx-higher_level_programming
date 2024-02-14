@@ -2,64 +2,81 @@
 """Unitest module"""
 
 import unittest
-
+from models.base import Base
 from models.rectangle import Rectangle
 
-class Test_Rectangle(unittest.TestCase):
+class Test_Rectangle_ِArgs(unittest.TestCase):
     """Defines Rectangle class test cases"""
 
     def test_id(self):
         """test different cases for id """
         R1 = Rectangle(10, 4)
-        R2 = Rectangle(10, 2, 0, 0, 12)
+        #R2 = Rectangle(10, 2, 0, 0, 12)
         R3 = Rectangle(2, 10)
-        self.assertEqual(R3.id, R1.id + 1)
-        self.assertEqual(R2.id, 12)
-
-    def test_att(self):
-        """Tests diff attributes """
-        R = Rectangle(12,10)
+        self.assertEquals(R3.id, R1.id + 1)
         with self.assertRaises(TypeError):
             R_arg = Rectangle()
         with self.assertRaises(AttributeError):
-            print(Rectangle(10, 2).__width)
+            print(R1.__width)
         with self.assertRaises(AttributeError):
-            print(Rectangle(10, 2).__height)               
+            print(Rectangle(10, 2).__height)        
+
+    def test_width(self):
+        """Tests width attribute """
+        R = Rectangle(12,10)
+        self.assertEquals(R.width, 12)
+
         R.width = 14    
-        self.assertEqual(R.width, 14)    
+        self.assertEquals(R.width, 14)
 
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            R.width = -1
 
-    def test_types(self):
-        """Tests different value types of rect object Args"""
-        Rect = Rectangle(10, 6)
-        #wheight
         with self.assertRaises(TypeError):
-            Rectangle(10,"x")
+            R.width = "t"   
+       
+    def test_height(self):
+        """Tests height attribute"""
+        Rect = Rectangle(10, 6)
+        self.assertEquals(Rect.height, 6)
+
+        Rect.height = 8
+        self.assertEquals(Rect.height, 8)
+
+        with self.assertRaises(TypeError):
+            Rect1 = Rectangle(10,"x")
         
         with self.assertRaises(ValueError):
-            Rect.height = 0
-        #width
-        with self.assertRaisesRegex(ValueError, "width must be > 0"):
-            Rectangle(-9, 10)
+            Rect.height = -1
 
-        with self.assertRaises(TypeError):
-            Rect.width = "t"
-        #x
-        with self.assertRaises(TypeError):
-            Rectangle(10, 20, "4", 5)
+        
+    def test_x(self):
+        """Tests x attribute"""
+        R = Rectangle(10, 11, 12, 13)
+        self.assertEquals(R.x, 12)
+
+        R.x = 9
+        self.assertEquals(R.x, 9)
 
         with self.assertRaises(ValueError):
-            Rect.x = -1
+            R.x = -1
 
         with self.assertRaises(TypeError):
-            Rect.x = "x"
+            R.x = "x"
+
+    def test_y(self):
+        """Tests y attribute"""
+        R = Rectangle(1, 11, 21, 31)
+        self.assertEquals(R.y, 31)
+
+        R.y = 19
+        self.assertEquals(R.y, 19)
+
         with self.assertRaises(TypeError):
             Rectangle(10, 20, 5, "y")
-
-        with self.assertRaises(TypeError):
-            Rect.y = "y"    
+   
         with self.assertRaises(ValueError):
-            Rect.y = -5     
+            R.y = -5     
 
 if __name__ == '__main__':
     unittest.main()

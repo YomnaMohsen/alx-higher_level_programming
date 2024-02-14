@@ -33,7 +33,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
             R.width = -1
 
         with self.assertRaises(TypeError):
-            R.width = "t"   
+            Rectangle("e", 2)   
        
     def test_height(self):
         """Tests height attribute"""

@@ -24,22 +24,27 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print(Rectangle(10,2).__width)
         with self.assertRaises(AttributeError):
-            print(Rectangle(10,2).__height)
+            print(Rectangle(10,2).__height)               
         R.width = 14    
         self.assertEqual(R.width, 14)    
 
 
-    #def test_types(self):
-     #   """Tests different value types of rect object Args"""
-       
-      #  with self.assertRaises(TypeError):
-       #     Rectangle(10)    
-        
-              
+    def test_types(self):
+       """Tests different value types of rect object Args"""
+       Rect = Rectangle(10,6)
 
-        
-         
+       with self.assertRaises(TypeError):
+        Rectangle(10,"x")
+
+       with self.assertRaises(ValueError):
+        Rect.width = 0
+
+       with self.assertRaisesRegex(TypeError, "height must be an integer"):
+          Rectangle(10, None)
+
+       with self.assertRaises(ValueError):
+        Rect.x =-1    
+      
 
 if __name__ == '__main__':
     unittest.main()
-

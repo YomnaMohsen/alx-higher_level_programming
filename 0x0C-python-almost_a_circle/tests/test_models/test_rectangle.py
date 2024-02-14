@@ -32,20 +32,21 @@ class Test_Rectangle(unittest.TestCase):
     def test_types(self):
         """Tests different value types of rect object Args"""
         Rect = Rectangle(10, 6)
+        #wheight
         with self.assertRaises(TypeError):
             Rectangle(10,"x")
         
         with self.assertRaises(ValueError):
             Rect.height = 0
-
+        #width
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Rectangle(-9, 10)
 
         with self.assertRaises(TypeError):
-            Rect.height = "t"
-
+            Rect.width = "t"
+        #x
         with self.assertRaises(TypeError):
-            Rectangle(10, 20, None, 5)
+            Rectangle(10, 20, "4", 5)
 
         with self.assertRaises(ValueError):
             Rect.x = -1

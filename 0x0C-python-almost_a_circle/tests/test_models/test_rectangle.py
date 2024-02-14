@@ -58,16 +58,17 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
         R.x = 9
         self.assertEquals(R.x, 9)
 
-        with self.assertRaises(ValueError):
-            R.x = -1
-
+        with self.assertRaises(TypeError):
+            R.x = []
         with self.assertRaises(TypeError):
             R1 = Rectangle(10, 11, "y", 13)
         with self.assertRaises(TypeError):
             R2 = Rectangle(10, 11, [1, 2, 3])
 
         with self.assertRaises(TypeError):
-            Rectangle(10, 11, {})       
+            Rectangle(10, 11, {})
+        with self.assertRaises(ValueError):
+            R.x = -1           
 
     def test_y(self):
         """Tests y attribute"""

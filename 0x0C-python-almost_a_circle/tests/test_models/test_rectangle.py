@@ -45,13 +45,18 @@ class Test_Rectangle(unittest.TestCase):
             Rect.height = "t"
 
         with self.assertRaises(TypeError):
-            Rect.x = None
+            Rectangle(10, 20, None, 5)
 
         with self.assertRaises(ValueError):
-            Rect.x = -1 
+            Rect.x = -1
+
         with self.assertRaises(TypeError):
-            Rect.y = None
-            
+            Rect.x = "x"
+        with self.assertRaises(TypeError):
+            Rectangle(10, 20, 5, "y")
+
+        with self.assertRaises(TypeError):
+            Rect.y = "y"    
         with self.assertRaises(ValueError):
             Rect.y = -5     
 

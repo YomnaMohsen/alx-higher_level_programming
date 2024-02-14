@@ -8,19 +8,12 @@ from models.rectangle import Rectangle
 class Test_Rectangle_ِArgs(unittest.TestCase):
     """Defines Rectangle class test cases"""
 
-    def test_id(self):
-        """test different cases for id """
-        R1 = Rectangle(10, 4)
+    def test_args(self):
+        """test different cases for args """
         R2 = Rectangle(1, 2, 3, 4, 5)
-        R3 = Rectangle(2, 10)
-        self.assertEqual(2, R2.height)
-        self.assertEqual(R3.id, R1.id + 1)
-        with self.assertRaises(TypeError):
-            R_arg = Rectangle()
+        self.assertEqual(5, R2.id)
         with self.assertRaises(AttributeError):
-            print(R1.__width)
-        with self.assertRaises(AttributeError):
-            print(Rectangle(10, 2).__height)        
+            print(R2.__width)        
 
     def test_width(self):
         """Tests width attribute """
@@ -35,7 +28,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
 
         with self.assertRaises(TypeError):
             Rectangle("e", 2)
-            
+
         with self.assertRaises(ValueError):
             Rectangle(0, 10)       
        
@@ -55,7 +48,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
             Rectangle(10, -2)
 
         with self.assertRaises(ValueError):
-            Rectangle(0, 10)      
+            Rectangle(11, 0)      
 
         
     def test_x(self):

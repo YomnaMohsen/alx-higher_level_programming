@@ -11,7 +11,7 @@ class Test_Rectangle_ِArgs(unittest.TestCase):
     def test_args(self):
         """test different cases for args """
         R2 = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(5, R2.id)
+        self.assertEqual(2, R2.height)
         with self.assertRaises(AttributeError):
             print(R2.__width)        
 

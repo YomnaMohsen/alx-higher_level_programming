@@ -22,5 +22,5 @@ class Base:
         Args : list of dictionaries (list)
         """
         if list_dictionaries is None or list_dictionaries == []:
-            return None
+            return "[]"
         return json.dumps(list_dictionaries)

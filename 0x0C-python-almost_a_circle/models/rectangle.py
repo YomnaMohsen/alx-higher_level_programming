@@ -93,3 +93,12 @@ class Rectangle(Base):
                                                        self.x, self.y,
                                                        self.width,
                                                        self.height)
+
+    def to_dictionary(self):
+        """Return dictionary rep. of rectangle object"""
+        dict = {
+            "id": self.id, "width": self.width,
+            "height": self.height, "x": self.x,
+            "y": self.y
+             }
+        return dict

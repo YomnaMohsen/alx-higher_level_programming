@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Unitest module"""
 
+import json
 import unittest
 from models.base import Base
 
@@ -15,6 +16,12 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(B1.id, 1)
         self.assertEqual(B2.id, 2)
         self.assertEqual(B3.id, 10)
+
+    def test_json(self):
+      """test converting from to json"""
+      B = Base()
+      
+        
 
 if __name__ == '__main__':
     unittest.main()

@@ -83,8 +83,9 @@ class Rectangle(Base):
         """display rectangle of #"""
         if self.height == 0 or self.width == 0:
             return ""
-        s = ("#" * self.width + "\n") * (self.height - 1) + ("#" * self.width)
-        print(s)
+        s = (self.y * "\n") + (self.height) * (self.x * " " +
+                                               "#" * self.width + "\n")
+        print(s, end="")
 
     def __str__(self):
         """custom str fn"""

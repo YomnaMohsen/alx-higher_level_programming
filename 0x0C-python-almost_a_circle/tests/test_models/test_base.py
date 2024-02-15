@@ -4,6 +4,7 @@
 import json
 import unittest
 from models.base import Base
+from  models.rectangle import Rectangle
 
 class Test_Base(unittest.TestCase):
     """Defines Base class test cases"""
@@ -18,8 +19,9 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(B3.id, 10)
 
     def test_json(self):
-      """test converting from to json"""
-      B = Base()
+      """test converting from or to json string"""
+      self.assertEqual(Base.to_json_string(None), "[]")
+      self.assertEqual(Base.to_json_string([]), "[]")
       
         
 

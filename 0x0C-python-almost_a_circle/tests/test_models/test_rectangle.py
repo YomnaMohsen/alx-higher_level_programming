@@ -88,7 +88,7 @@ class Test_Rectangle_methods(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(-10, 20).area()
 
-    def test_dis(self):        
+        
 
 
 if __name__ == '__main__':

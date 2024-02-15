@@ -3,7 +3,7 @@
 
 
 def read_file(filename=""):
-    """reads from file amd print 
+    """reads from file amd print
     to stdout
     Args:
     filename: string

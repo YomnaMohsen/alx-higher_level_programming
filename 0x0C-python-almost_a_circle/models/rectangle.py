@@ -103,9 +103,12 @@ class Rectangle(Base):
              }
         return dict
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates rectangle attributes"""
-        if args:
+        if args and len(args) != 0:
             attr_list = ['id', 'width', 'height', 'x', 'y']
             for i in range(0, len(args)):
                 setattr(self, attr_list[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)

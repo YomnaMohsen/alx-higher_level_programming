@@ -11,6 +11,8 @@ class TestMaxInteger(unittest.TestCase):
         """test arg passed to max_int fn"""
         self.assertEqual(max_integer([]), None)
 
+        self.assertEqual(max_integer([4]), 4)
+
         self.assertEqual(max_integer([5, 2, 4, 6]), 6)
 
         self.assertEqual(max_integer([7, 2, 4, 6]), 7)

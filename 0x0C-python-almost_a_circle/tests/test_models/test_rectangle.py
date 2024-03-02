@@ -88,6 +88,11 @@ class Test_Rectangle_methods(unittest.TestCase):
         with self.assertRaises(ValueError):
             Rectangle(-10, 20).area()
 
+    def test_string(self):
+        """test string fn"""
+        r1 = Rectangle(4, 6, 2, 1, 12)
+        self.assertEqual(print(r1), "[Rectangle] (12) 2/1 - 4/6")       
+
         
 
 

@@ -98,7 +98,7 @@ class Test_Rectangle_methods(unittest.TestCase):
         "test to_dict_method"       
         r1 = Rectangle(10, 2, 1, 9)
         exp_dict={'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
-        self.assertDictEqual(r1.to_dictionary, exp_dict)
+        self.assertDictEqual(r1.to_dictionary(), exp_dict)
 
 if __name__ == '__main__':
     unittest.main()

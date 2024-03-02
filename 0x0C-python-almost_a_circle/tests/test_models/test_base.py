@@ -22,7 +22,9 @@ class Test_Base(unittest.TestCase):
       """test converting from or to json string"""
       self.assertEqual(Base.to_json_string(None), "[]")
       self.assertEqual(Base.to_json_string([]), "[]")
-      
+      self.assertEqual(Base.from_json_string(None), [])
+      self.assertEqual(Base.from_json_string("[]"), [])
+      self.assertEqual(Base.from_json_string('[{"id" : 89}]'), [{"id" : 89}])
         
 
 if __name__ == '__main__':

@@ -91,7 +91,8 @@ class Test_Rectangle_methods(unittest.TestCase):
     def test_string(self):
         """test string fn"""
         r1 = Rectangle(4, 6, 2, 1, 12)
-        self.assertEqual(print(r1), "[Rectangle] (12) 2/1 - 4/6")       
+        expected = "[Rectangle] (12) 2/1 - 4/6"
+        self.assertEqual(str(r1),expected)       
 
         
 

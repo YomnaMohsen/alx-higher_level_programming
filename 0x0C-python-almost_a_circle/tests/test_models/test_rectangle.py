@@ -89,13 +89,16 @@ class Test_Rectangle_methods(unittest.TestCase):
             Rectangle(-10, 20).area()
 
     def test_string(self):
-        """test string fn"""
+        """test string fn like dispaly, __str__"""
         r1 = Rectangle(4, 6, 2, 1, 12)
         expected = "[Rectangle] (12) 2/1 - 4/6"
-        self.assertEqual(str(r1),expected)       
-
+        self.assertEqual(str(r1),expected) 
         
-
+    def to_dict_test(self):
+        "test to_dict_method"       
+        r1 = Rectangle(10, 2, 1, 9)
+        exp_dict={'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        self.assertDictEqual(r1.to_dictionary, exp_dict)
 
 if __name__ == '__main__':
     unittest.main()

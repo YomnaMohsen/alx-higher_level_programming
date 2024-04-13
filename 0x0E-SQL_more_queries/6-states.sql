@@ -2,5 +2,5 @@
 -- (in the database hbtn_0d_usa) on your MySQL server
 CREATE DATABASE IF NOT EXISTS  `hbtn_0d_usa`;
 CREATE TABLE IF NOT EXISTS hbtn_0d_usa.states (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY Default 1,
     name VARCHAR(256) NOT NULL);

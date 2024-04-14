@@ -16,7 +16,8 @@ if __name__ == "__main__":
     cur = db.cursor()
     name = argv[4]
     """BINARY to force case senstive"""
-    cur.execute(f"SELECT * FROM states WHERE name LIKE BINARY '{name}';")
+    cur.execute("SELECT * FROM states WHERE name \
+                LIKE BINARY '{}';".format(name))
     states = cur.fetchall()
 
     for state in states:

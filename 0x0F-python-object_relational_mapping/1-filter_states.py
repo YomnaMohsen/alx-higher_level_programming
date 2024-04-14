@@ -13,6 +13,7 @@ if __name__ == "__main__":
         passwd=argv[2],
         db=argv[3])
     cur = db.cursor()
+    """BINARY to force case senstive"""
     cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%';")
     states = cur.fetchall()
 

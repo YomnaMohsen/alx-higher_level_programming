@@ -1,0 +1,1 @@
+This folder contains tasks about using MySQLdb and SQLAlchemy modules in python.

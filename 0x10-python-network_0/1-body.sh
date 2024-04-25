@@ -1,3 +1,3 @@
 #!/bin/bash
-# script to dispaly size of response body using curl
+# script to Display only body of a 200 status code response
 curl -sL "$1"

@@ -9,4 +9,4 @@ if __name__ == "__main__":
         with req.urlopen(sys.argv[1]) as response:
             print(response.read().decode("utf-8"))
     except HTTPError:
-        print("Error code: {}".format(HTTPError.code))
+        print("Error code:{}".format(HTTPError.code))

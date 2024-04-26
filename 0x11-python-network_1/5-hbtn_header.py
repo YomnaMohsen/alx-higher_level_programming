@@ -5,4 +5,4 @@ found in the header of the response."""
 if __name__ == "__main__":
     import requests
     import sys
-    print(requests.get(sys.argv[1]).headers["X-Request-Id"])
+    print(requests.get(sys.argv[1]).headers.get("X-Request-Id"))

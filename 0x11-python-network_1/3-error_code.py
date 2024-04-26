@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""mangaed error HTTPERROR exception when send request to URL"""
+"""managed error HTTPERROR exception when send request to URL"""
 
 if __name__ == "__main__":
     import urllib.request as req

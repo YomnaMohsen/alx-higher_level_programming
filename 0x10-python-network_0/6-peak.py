@@ -10,7 +10,7 @@ def find_peak(n_list):
         if med > 0 and n_list[med] < n_list[med - 1]:
             right = med - 1
         # go to right neigh
-        elif med < len(n_list)- 1 and n_list[med] < n_list[med + 1]:
+        elif med < len(n_list) - 1 and n_list[med] < n_list[med + 1]:
             left = med + 1
         else:
             return n_list[med]

@@ -13,4 +13,4 @@ def find_peak(n_list):
         elif med < len(n_list)- 1 and n_list[med] < n_list[med + 1]:
             left = med + 1
         else:
-            return n_list[med]   
+            return n_list[med]

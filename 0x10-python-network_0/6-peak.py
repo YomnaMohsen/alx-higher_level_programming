@@ -3,6 +3,7 @@
 
 
 def find_peak(n_list):
+    """return first peak in list"""
     left, right = 0, len(n_list) - 1
     while (left <= right):
         med = left + (right - left) // 2

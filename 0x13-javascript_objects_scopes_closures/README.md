@@ -1,0 +1,1 @@
+This folder contains tasks about creating classes and ojects in javascript

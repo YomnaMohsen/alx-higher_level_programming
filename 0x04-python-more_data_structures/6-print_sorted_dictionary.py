@@ -3,7 +3,3 @@ def print_sorted_dictionary(a_dictionary):
     """ prints a dictionary by ordered keys"""
     for k in sorted(a_dictionary):
         print("{:s}: {}".format(k, a_dictionary[k]))
-    
-
-a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
-print_sorted_dictionary(a_dictionary)

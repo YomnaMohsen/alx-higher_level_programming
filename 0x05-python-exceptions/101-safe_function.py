@@ -12,5 +12,5 @@ def safe_function(fct, *args):
         return value
         
     except Exception as error:
-        print("Exception {}".format(error), file = sys.stderr)
+        print("Exception: {}".format(error), file = sys.stderr)
         return None

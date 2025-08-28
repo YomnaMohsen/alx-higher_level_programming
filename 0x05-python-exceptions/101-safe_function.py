@@ -12,5 +12,14 @@ def safe_function(fct, *args):
         return value
         
     except:
-        print("Exception {}".format((sys.exc_info()[1]), file = sys.stderr))
+        print("Exception {}".format(sys.exc_info()[1]), file = sys.stderr)
         return None
+
+def my_div(a, b):
+    return a / b
+
+result = safe_function(my_div, 10, 2)
+print("result of my_div: {}".format(result))
+
+result = safe_function(my_div, 10, 0)
+print("result of my_div: {}".format(result))

@@ -1,1 +1,1 @@
-Using bash and pyrhon scripting to send http request and get information by curl command
+Using bash and python scripting to send http request and get information by curl command

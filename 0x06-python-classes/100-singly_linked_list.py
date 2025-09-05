@@ -37,7 +37,7 @@ class Node:
         if value == None or isinstance(value, Node):
             self.__next_node = value
         else:
-            raise TypeError("must be a Node object")    
+            raise TypeError("next_node must be a Node object")    
 
 
 class SinglyLinkedList:
@@ -82,7 +82,5 @@ class SinglyLinkedList:
                                       else ""))
             tmp = tmp.next_node
         return  f_str   
-
-      
         
  

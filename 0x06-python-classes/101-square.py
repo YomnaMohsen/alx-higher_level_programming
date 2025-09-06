@@ -47,16 +47,20 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """Prints new line then spacees then square number of size #"""
+        """Prints square number of size #"""
         if (self.size == 0):
             print("")
             return
         print(("\n" * self.position[1]) +
               ((" " * self.position[0]) +
-               ("#" * self.size + "\n")) * self.size,end="")
-        """ [print("") for i in range(self.position[1])]
-        for j in range(self.size):
-            [print(" ", end="") for k in range(self.position[0])]
-            [print("#", end="") for h in range(self.size)]
-            print()"""
+               ("#" * self.size + "\n")) * self.size, end="")
 
+    def __str__(self):
+        """Prints square number of size #"""
+        if (self.size == 0):
+            return("")
+            
+        my_str = (("\n" * self.position[1]) +
+              ((" " * self.position[0]) +
+               ("#" * self.size + "\n")) * self.size)
+        return my_str.rstrip("\n")

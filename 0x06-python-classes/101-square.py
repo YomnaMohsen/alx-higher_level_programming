@@ -46,21 +46,19 @@ class Square:
         """Calculates the square area"""
         return self.__size * self.__size
 
-    def __eq__(self, other):
-        return self.area() == other.area()
-    
-    def __ne__(self, other):
-        return self.area() != other.area()
-    
-    def __lt__(self, other):
-        return self.area() < other.area()
-    
-    def __le__(self, other):
-        return self.area() <= other.area()
-    
-    def __gt__(self, other):
-        return self.area() > other.area()
-    
-    def __ge__(self, other):
-        return self.area() >= other.area()
-    
+    def my_print(self):
+        """Prints square number of size #"""
+        if (self.size == 0):
+            print("")
+            return
+        print(("\n" * self.position[1]) +
+              ((" " * self.position[0]) +
+               ("#" * self.size + "\n")) * self.size, end="")
+       
+    def __str__(self):
+        if (self.size == 0):
+            return("")
+        str = ("\n" * self.position[1] +
+               (" " * self.position[0] +
+               "#" * self.size + "\n") * self.size)
+        

@@ -61,4 +61,5 @@ class Square:
         str = ("\n" * self.position[1] +
                (" " * self.position[0] +
                "#" * self.size + "\n") * self.size)
-        
+        """removes char from end of string""" 
+        return str.rstrip("\n")

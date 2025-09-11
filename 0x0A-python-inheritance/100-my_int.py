@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+"""Defines MyInt that is subclass from int"""
 
 
 class MyInt(int):

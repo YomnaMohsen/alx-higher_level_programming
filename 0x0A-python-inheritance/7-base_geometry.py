@@ -6,7 +6,6 @@ class BaseGeometry:
     """The base class for geometry shapes
         defines area function
     """
-
     def area(self):
         """raise not-implemented exception"""
         raise Exception("area() is not implemented")
@@ -18,6 +17,7 @@ class BaseGeometry:
             name :string
             value: int
         """
+        
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:

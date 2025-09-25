@@ -13,7 +13,7 @@ class Square(Rectangle):
             size :int
             self.__size = size
         """
-        # here I can't call with super cause it is not in parent
+        # here I can't call with super cause it is not in parent acc. to MRO
         # we can call it also with base_gemotery.
         
         self.integer_validator("size",  size)

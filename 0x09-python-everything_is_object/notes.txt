@@ -1,0 +1,5 @@
+In q18, the local varialble n is rebinded not mutated so l1 was not affected.
+
+if n mutated like this n[:] = v, so l1 will be affected
+
+In q15 l1 = l1 + [4] makes new var (rebind) if l1 += [4] mutation for same object

@@ -1,1 +1,1 @@
-This folder conatins interview questions for python
+This folder contains interview questions for python
